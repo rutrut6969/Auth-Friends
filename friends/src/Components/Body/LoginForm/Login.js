@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import axiosWithAuth from '../../../Utils/axiosWithAuth';
+import { axiosWithAuth } from '../../../Utils/axiosWithAuth';
 
 export default function Login(props) {
   const [user, setUser] = useState({
