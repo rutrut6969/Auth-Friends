@@ -17,9 +17,14 @@ export default function Nav(props) {
       <ul>
         <li>
           {token ? (
-            <Link className='link' onClick={logout}>
-              Logout
-            </Link>
+            <div className='logoutwrap'>
+              <Link className='link' onClick={logout}>
+                Logout
+              </Link>
+              <Link className='link' to='/addfriend'>
+                Add Friend
+              </Link>
+            </div>
           ) : null}
         </li>
         <li>

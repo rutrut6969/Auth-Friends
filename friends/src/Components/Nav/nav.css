@@ -10,9 +10,15 @@
 .nav ul {
   display: flex;
   justify-content: space-around;
-  width: 15%;
+  width: 50%;
 }
 .link {
   text-decoration: none;
   color: black;
+}
+
+.logoutwrap {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
