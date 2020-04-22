@@ -12,8 +12,8 @@ function App() {
       <Nav />
 
       <Switch>
-        <Route to='/login' component={Login} />
-        <PrivateRouter to='/home' component={Home} />
+        <Route path='/login' component={Login} />
+        <PrivateRouter exact path='/home' component={Home} />
       </Switch>
     </div>
   );

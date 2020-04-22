@@ -11,10 +11,16 @@ export default function Login(props) {
   let history = useHistory();
   const login = (e) => {
     e.preventDefault();
-    axiosWithAuth.post('/api/login', user).then((res) => {
-      localStorage.setItem('token', JSON.stringify(res.data.payload));
-      history.push('/home');
-    });
+    axiosWithAuth()
+      .post('http://localhost:5000/api/login', user)
+      .then((res) => {
+        console.log({ res });
+        localStorage.setItem('token', JSON.stringify(res.data.payload));
+        history.push('/home');
+      })
+      .catch((err) => console.log({ err }));
+
+    window.location.replace('http://localhost:3000/home');
   };
 
   const handleChange = (e) => {
@@ -45,6 +51,7 @@ export default function Login(props) {
         />
       </label>
       <button type='submit'>Login!</button>
+      Hello from Login
     </form>
   );
 }
